@@ -33,7 +33,7 @@ fun MaterialCard(
             )
             Text(text = "overline", style = MaterialTheme.typography.overline)
             Text(text = "title", style = BasilTypography.h5Serif)
-            Text(text = "body", style = MaterialTheme.typography.body1)
+            Text(text = "body", style = BasilTypography.body1Sans)
         }
     }
 }

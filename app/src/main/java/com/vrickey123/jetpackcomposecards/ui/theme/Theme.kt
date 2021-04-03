@@ -21,7 +21,7 @@ private val LightColorPalette = lightColors(
     onPrimary = BasilGreenDark,
     onSecondary = BasilGreenDark,
     onBackground = BasilGreenMid,
-    onSurface = BasilGreenDark
+    onSurface = BasilOrange
 )
 
 @Composable

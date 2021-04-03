@@ -15,9 +15,8 @@ import com.vrickey123.jetpackcomposecards.ui.theme.typography.font.QuattroCentoS
 private val Typography = Typography(
     defaultFontFamily = Merriweather,
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontSize = 16.sp,
+        color = BasilGreenDark
     ),
     /* Other default text styles to override
     button = TextStyle(
@@ -31,6 +30,9 @@ private val Typography = Typography(
         fontSize = 12.sp
     )
     */
+    overline = TextStyle(
+        color = BasilGreenDark
+    )
 )
 
 val BasilTypography = BasilType()
@@ -53,7 +55,6 @@ data class BasilType(
         fontFamily = Merriweather,
         fontWeight = FontWeight.Normal,
         fontStyle = FontStyle.Normal,
-        color = BasilOrange
     ),
     val h5SerifItalic: TextStyle = Typography.h5.copy(
         fontFamily = Merriweather,
