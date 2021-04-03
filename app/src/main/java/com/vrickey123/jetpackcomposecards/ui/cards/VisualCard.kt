@@ -2,10 +2,7 @@ package com.vrickey123.jetpackcomposecards.ui.cards
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +19,7 @@ import com.vrickey123.jetpackcomposecards.data.model.TextComponent
 import com.vrickey123.jetpackcomposecards.extensions.build
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTypography
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilYellowDark
+import com.vrickey123.jetpackcomposecards.ui.theme.MaterialInnerHorizontalPadding
 
 @Composable
 fun VisualCard(
@@ -51,7 +49,8 @@ fun VisualCard(
                 text = title.text,
                 style = TextStyle.build(title.textStyleKey))*/
             Text(
-                modifier = Modifier.zIndex(3f),
+                modifier = Modifier.zIndex(3f)
+                    .padding(horizontal = MaterialInnerHorizontalPadding),
                 text = "hello from visual card",
                 style = BasilTypography.h6SansBoldInverse
             )
