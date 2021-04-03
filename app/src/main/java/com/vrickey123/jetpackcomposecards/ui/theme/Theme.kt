@@ -46,7 +46,7 @@ fun BasilTheme(
 
     MaterialTheme(
         colors = LightColorPalette,
-        typography = Typography,
+        typography = BasilTypography.materialTypography,
         shapes = Shapes,
         content = content
     )
