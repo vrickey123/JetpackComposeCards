@@ -16,9 +16,12 @@ private val LightColorPalette = lightColors(
     primary = BasilGreenMid,
     primaryVariant = BasilGreenDark,
     secondary = BasilOrange,
+    background = BasilGreenUltraLight,
+    surface = BasilYellow,
     onPrimary = BasilOrange,
     onSecondary = BasilGreenDark,
-    onBackground = BasilGreenUltraLight
+    onBackground = BasilGreenMid,
+    onSurface = BasilOrange
 
     /* Other default colors to override
     background = Color.White,
