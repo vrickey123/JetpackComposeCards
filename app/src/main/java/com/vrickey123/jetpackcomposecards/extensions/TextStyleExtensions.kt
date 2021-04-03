@@ -1,13 +1,12 @@
 package com.vrickey123.jetpackcomposecards.extensions
 
-import androidx.compose.material.MaterialTheme
 import androidx.compose.ui.text.TextStyle
-import androidx.core.widget.TextViewCompat
 
 fun TextStyle.Companion.build(textStyleKey: String): TextStyle {
-    when (textStyleKey) {
+/*    when (textStyleKey) {
         "material" -> {
-            return MaterialTheme.typography.h5
+            BasilTypography.h5Serif
+            return Jet.isDark
             TextViewCompat.setTextAppearance(titleTextView, R.style.H5)
             bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body) }
         }
@@ -35,6 +34,6 @@ fun TextStyle.Companion.build(textStyleKey: String): TextStyle {
             TextViewCompat.setTextAppearance(titleTextView, R.style.H5)
             bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body) }
         }
-    }
+    }*/
     return TextStyle()
 }
