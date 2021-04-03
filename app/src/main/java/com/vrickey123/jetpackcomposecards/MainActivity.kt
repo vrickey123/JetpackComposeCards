@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.vrickey123.jetpackcomposecards.ui.cards.ThumbnailCard
 import com.vrickey123.jetpackcomposecards.ui.cards.VisualCard
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTheme
 
@@ -27,7 +28,8 @@ class MainActivity : ComponentActivity() {
                             Text(text = "Hello card!")
                         }
                         //MaterialCard()
-                        VisualCard(title = "hello")
+                        //VisualCard(title = "hello")
+                        ThumbnailCard()
                     }
                 }
             }
