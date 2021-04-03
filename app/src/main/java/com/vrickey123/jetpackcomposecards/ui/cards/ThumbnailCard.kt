@@ -14,6 +14,8 @@ import androidx.compose.ui.unit.dp
 import com.vrickey123.jetpackcomposecards.R
 import com.vrickey123.jetpackcomposecards.data.model.TextComponent
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTypography
+import com.vrickey123.jetpackcomposecards.ui.theme.MaterialInnerHorizontalPadding
+import com.vrickey123.jetpackcomposecards.ui.theme.MaterialInnerVerticalPadding
 
 @Composable
 fun ThumbnailCard(
@@ -22,10 +24,17 @@ fun ThumbnailCard(
     body: TextComponent? = null
 ) {
     Card(Modifier.fillMaxWidth()) {
-        Row {
+        Row(
+            Modifier.padding(
+                horizontal = MaterialInnerHorizontalPadding,
+                vertical = MaterialInnerVerticalPadding
+            )
+        ) {
             Column() {
                 Image(
-                    modifier = Modifier.height(75.dp).width(75.dp),
+                    modifier = Modifier
+                        .height(75.dp)
+                        .width(75.dp),
                     painter = painterResource(id = R.drawable.bird_parrots_hugging),
                     contentScale = ContentScale.Crop,
                     contentDescription = "Two green parrots hugging",
@@ -35,9 +44,11 @@ fun ThumbnailCard(
             Column {
                 Text(text = "overline", style = MaterialTheme.typography.overline)
                 Text(text = "title", style = BasilTypography.h5Serif)
-                Text(text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " +
-                        "eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                    style = BasilTypography.body1Sans)
+                Text(
+                    text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " +
+                            "eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    style = BasilTypography.body1Sans
+                )
             }
         }
     }
