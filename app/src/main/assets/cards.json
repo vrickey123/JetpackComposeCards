@@ -3,9 +3,32 @@
     "id": 1,
     "layoutKey": "material",
     "textStyleKey": "italic",
-    "title": "Lorem ipsum",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "overline": "Birds of Paradise"
+
+    "title": {
+      "text": "",
+      "textStyleKey": ""
+    },
+    "body": {
+      "text": "",
+      "textStyleKey": ""
+    },
+    "overline": {
+      "text": "",
+      "textStyleKey": ""
+    },
+
+    "title": {
+      "text": "Lorem ipsum",
+      "textStyleKey": "h5"
+    },
+    "body": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "textStyleKey": "body"
+    },
+    "overline": {
+      "text": "Birds of Paradise",
+      "textStyleKey": "overline"
+    }
   },
   {
     "id": 2,
