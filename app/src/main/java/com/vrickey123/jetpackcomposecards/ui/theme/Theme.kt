@@ -18,19 +18,10 @@ private val LightColorPalette = lightColors(
     secondary = BasilOrange,
     background = BasilGreenUltraLight,
     surface = BasilYellow,
-    onPrimary = BasilOrange,
+    onPrimary = BasilGreenDark,
     onSecondary = BasilGreenDark,
     onBackground = BasilGreenMid,
-    onSurface = BasilOrange
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    onSurface = BasilGreenDark
 )
 
 @Composable

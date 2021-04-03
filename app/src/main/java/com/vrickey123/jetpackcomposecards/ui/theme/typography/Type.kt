@@ -52,7 +52,8 @@ data class BasilType(
     val h5Serif: TextStyle = Typography.h5.copy(
         fontFamily = Merriweather,
         fontWeight = FontWeight.Normal,
-        fontStyle = FontStyle.Normal
+        fontStyle = FontStyle.Normal,
+        color = BasilOrange
     ),
     val h5SerifItalic: TextStyle = Typography.h5.copy(
         fontFamily = Merriweather,
