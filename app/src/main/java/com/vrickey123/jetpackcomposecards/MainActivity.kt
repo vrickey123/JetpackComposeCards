@@ -27,9 +27,6 @@ class MainActivity : ComponentActivity() {
                         Card() {
                             Text(text = "Hello card!")
                         }
-                        //MaterialCard()
-                        //VisualCard(title = "hello")
-                        ThumbnailCard()
                     }
                 }
             }

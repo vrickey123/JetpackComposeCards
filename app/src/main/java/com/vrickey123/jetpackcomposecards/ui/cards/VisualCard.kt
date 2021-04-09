@@ -23,7 +23,7 @@ import com.vrickey123.jetpackcomposecards.ui.theme.MaterialInnerHorizontalPaddin
 
 @Composable
 fun VisualCard(
-    title: String
+    title: TextComponent
 ) {
     val verticalGradientBrush = Brush.verticalGradient(
         colors = listOf(
@@ -45,14 +45,11 @@ fun VisualCard(
             Box(modifier = Modifier.background(verticalGradientBrush)
                 .matchParentSize()
                 .zIndex(2f))
-            /*Text(modifier = Modifier.zIndex(1F),
-                text = title.text,
-                style = TextStyle.build(title.textStyleKey))*/
             Text(
                 modifier = Modifier.zIndex(3f)
                     .padding(horizontal = MaterialInnerHorizontalPadding),
-                text = "hello from visual card",
-                style = BasilTypography.h6SansBoldInverse
+                text = title.text,
+                style = TextStyle.build(title.textStyleKey)
             )
         }
     }
