@@ -1,39 +1,21 @@
 package com.vrickey123.jetpackcomposecards.extensions
 
 import androidx.compose.ui.text.TextStyle
+import com.vrickey123.jetpackcomposecards.data.model.BasilTextStyle
+import com.vrickey123.jetpackcomposecards.ui.theme.BasilTypography
 
-fun TextStyle.Companion.build(textStyleKey: String): TextStyle {
-/*    when (textStyleKey) {
-        "material" -> {
-            BasilTypography.h5Serif
-            return Jet.isDark
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body) }
-        }
-        "light" -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5_Serif_Light)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body_Sans) }
-        }
-        "visual" -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H6_Sans_Bold_Inverse)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body_Sans) }
-        }
-        "typeset" -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5_Serif)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body_Serif) }
-        }
-        "header" -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5_Sans_Bold)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body_Sans) }
-        }
-        "italic" -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5_SerifItalic)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body_Serif) }
-        }
-        else -> {
-            TextViewCompat.setTextAppearance(titleTextView, R.style.H5)
-            bodyTextView?.let { TextViewCompat.setTextAppearance(it, R.style.Body) }
-        }
-    }*/
-    return TextStyle()
+fun TextStyle.Companion.build(
+    textStyleKey: BasilTextStyle
+): TextStyle {
+    return when (textStyleKey) {
+        BasilTextStyle.H5 -> return BasilTypography.materialTypography.h5
+        BasilTextStyle.H5_SERIF -> return BasilTypography.h5Serif
+        BasilTextStyle.H5_SERIF_LIGHT -> return BasilTypography.h5SerifLight
+        BasilTextStyle.H5_SERIF_ITALIC -> return BasilTypography.h5SerifItalic
+        BasilTextStyle.H5_SANS_BOLD -> return BasilTypography.h6SansBold
+        BasilTextStyle.H6_SANS_BOLD_INVERSE -> return BasilTypography.h6SansBoldInverse
+        BasilTextStyle.BODY1 -> return BasilTypography.materialTypography.body1
+        BasilTextStyle.BODY1_SERIF -> BasilTypography.body1Serif
+        BasilTextStyle.BODY1_SANS -> BasilTypography.body1Sans
+    }
 }
