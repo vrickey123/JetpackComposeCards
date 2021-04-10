@@ -219,8 +219,28 @@ fun VisualCard(
 ```
 
 ## Jetpack Compose Text Style
-### BasilTypography Extends MaterialTypography
+### [BasilTypography](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/ui/theme/typography/Type.kt) Extends MaterialTypography
+To add new text styles and extend from ones that already exist in the Compose UI Material library, `BasilType` wraps Material `Typography`.
 ```kotlin
+@Immutable
+data class BasilType(
+    val materialTypography: Typography = Typography,
+    val h5SerifLight: TextStyle = Typography.h5.copy(
+        fontFamily = Merriweather,
+        fontWeight = FontWeight.Light,
+        fontStyle = FontStyle.Normal
+    ),
+    val h5SerifLightItalic: TextStyle = Typography.h5.copy(
+        fontFamily = Merriweather,
+        fontWeight = FontWeight.Light,
+        fontStyle = FontStyle.Italic
+    ),
+    val h5Serif: TextStyle = Typography.h5.copy(
+        fontFamily = Merriweather,
+        fontWeight = FontWeight.Normal,
+        fontStyle = FontStyle.Normal,
+    ),
+...
 ```
 
 ### TextStyle Extension Function Maps BasilTextStyle
