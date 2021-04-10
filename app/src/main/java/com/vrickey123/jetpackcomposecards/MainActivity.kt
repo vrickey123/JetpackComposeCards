@@ -6,12 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vrickey123.jetpackcomposecards.data.Serialization
@@ -28,39 +26,60 @@ class MainActivity : ComponentActivity() {
             Serialization.getCardsFromAsset(applicationContext, AssetUtil.FILENAME_CARDS)
         setContent {
             BasilTheme {
-                // A surface container using the 'background' color from the theme
+                // A Surface container using the 'background' color from the app's theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Column(
-                        modifier = Modifier.padding(
-                            horizontal = 16.dp,
-                            vertical = 16.dp
-                        )
-                    ) {
-                        LazyColumn() {
-                            items(cards) { card ->
-                                when (card) {
-                                    is Card.Material -> MaterialCard(
-                                        overline = card.overline,
-                                        title = card.title,
-                                        body = card.body
-                                    )
-                                    is Card.Thumbnail -> ThumbnailCard(
-                                        overline = card.overline,
-                                        title = card.title,
-                                        body = card.body
-                                    )
-                                    is Card.Visual -> VisualCard(
-                                        title = card.title
-                                    )
-                                }
-                                Spacer(modifier = Modifier.height(10.dp))
-                            }
+                    // A Scaffold is used to set Material Layouts like the TopAppBar and Drawer
+                    Scaffold(topBar = {
+                        TopAppBar {
+                            title = stringResource(id = R.string.app_name)
                         }
+                    }) {
+                        Content(cards = cards)
                     }
                 }
+            }
+        }
+    }
+}
+
+/**
+ * Displays the main content of our app in scrollable list.
+ *
+ * @param cards A list of Basil Cards that will render our Basil Composable Material,
+ * Thumbnail, and Visual UI
+ *
+ * */
+@Composable
+fun Content(
+    cards: List<Card>
+) {
+    Column(
+        modifier = Modifier.padding(
+            horizontal = 16.dp,
+            vertical = 16.dp
+        )
+    ) {
+        LazyColumn() {
+            items(cards) { card ->
+                when (card) {
+                    is Card.Material -> MaterialCard(
+                        overline = card.overline,
+                        title = card.title,
+                        body = card.body
+                    )
+                    is Card.Thumbnail -> ThumbnailCard(
+                        overline = card.overline,
+                        title = card.title,
+                        body = card.body
+                    )
+                    is Card.Visual -> VisualCard(
+                        title = card.title
+                    )
+                }
+                Spacer(modifier = Modifier.height(10.dp))
             }
         }
     }
