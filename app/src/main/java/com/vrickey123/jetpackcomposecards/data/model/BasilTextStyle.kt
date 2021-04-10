@@ -12,4 +12,5 @@ enum class BasilTextStyle {
     @Json(name = "body1") BODY1,
     @Json(name = "body1Serif") BODY1_SERIF,
     @Json(name = "body1Sans") BODY1_SANS,
+    @Json(name = "overline") OVERLINE
 }
