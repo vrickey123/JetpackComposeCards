@@ -17,6 +17,8 @@ import com.vrickey123.jetpackcomposecards.data.model.Card
 import com.vrickey123.jetpackcomposecards.ui.cards.MaterialCard
 import com.vrickey123.jetpackcomposecards.ui.cards.ThumbnailCard
 import com.vrickey123.jetpackcomposecards.ui.cards.VisualCard
+import com.vrickey123.jetpackcomposecards.ui.theme.MaterialActivityHorizontalMargin
+import com.vrickey123.jetpackcomposecards.ui.theme.MaterialActivityVerticalMargin
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTheme
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilYellow
 
@@ -59,8 +61,8 @@ class MainActivity : ComponentActivity() {
 fun Content(cards: List<Card>) {
     Column(
         modifier = Modifier.padding(
-            horizontal = 16.dp,
-            vertical = 16.dp
+            horizontal = MaterialActivityHorizontalMargin,
+            vertical = MaterialActivityVerticalMargin
         )
     ) {
         LazyColumn() {
