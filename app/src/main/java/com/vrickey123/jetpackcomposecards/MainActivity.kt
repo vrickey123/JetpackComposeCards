@@ -23,11 +23,15 @@ import com.vrickey123.jetpackcomposecards.ui.theme.BasilTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val cards: List<Card> = Serialization.getCardsFromAsset(applicationContext, AssetUtil.FILENAME_CARDS)
+        val cards: List<Card> =
+            Serialization.getCardsFromAsset(applicationContext, AssetUtil.FILENAME_CARDS)
         setContent {
             BasilTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background
+                ) {
                     Column {
                         LazyColumn() {
                             items(cards) { card ->
@@ -42,7 +46,9 @@ class MainActivity : ComponentActivity() {
                                         title = card.title,
                                         body = card.body
                                     )
-                                    is Card.Visual -> VisualCard(title = card.title)
+                                    is Card.Visual -> VisualCard(
+                                        title = card.title
+                                    )
                                 }
                             }
                         }
