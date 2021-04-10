@@ -47,7 +47,10 @@ fun VisualCard(
                 .zIndex(2f))
             Text(
                 modifier = Modifier.zIndex(3f)
-                    .padding(horizontal = MaterialInnerHorizontalPadding),
+                    .padding(
+                        horizontal = MaterialInnerHorizontalPadding,
+                        vertical = MaterialInnerHorizontalPadding
+                    ),
                 text = title.text,
                 style = TextStyle.build(title.textStyleKey)
             )
