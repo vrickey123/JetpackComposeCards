@@ -3,6 +3,8 @@
 
 This is a proof of concept for a Jetpack Compose card system with JSON-driven card layouts and text styles.
 
+https://user-images.githubusercontent.com/4541078/114261107-ceea1400-99a6-11eb-8571-765e400e6b3b.mp4
+
 ## Card and Text Style Variants
 This is expands on the older [AdapterDelegateCards](https://github.com/vrickey123/AdapterDelegateCards) project which used RecyclerView Card Components to acheive the same goal: reuse three card layouts with many text styles to compose variants. 
 
