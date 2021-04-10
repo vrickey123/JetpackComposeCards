@@ -1,3 +1,4 @@
+
 # JetpackComposeCards
 
 This is a proof of concept for a Jetpack Compose card system with JSON-driven card layouts and text styles.
@@ -296,4 +297,4 @@ This concept can easily be extended to drive styles from the sever by adding fie
     },
 ```
 
-While very powful, the tradoff with this approach compared to the `enum BasilTextStyle` text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries. Instead all of the styles would be dynamically generated. This could have some consequences for your themes and make your app harder to maintain.
+The tradoff with this approach compared to the `enum BasilTextStyle` text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries. Instead all of the styles would be dynamically generated. This could have some consequences for your themes and make your app harder to maintain.
