@@ -1,11 +1,18 @@
+
 # JetpackComposeCards
+
+<img src="https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/cards-compressed.gif" width="360">
 
 This is a proof of concept for a Jetpack Compose card system with JSON-driven card layouts and text styles.
 
 ## Card and Text Style Variants
-This is expands on the older [AdapterDelegateCards](https://github.com/vrickey123/AdapterDelegateCards) project which used RecyclerView Card Components to acheive the same goals. Many of the Design principles such as separating layout and text style sill apply, so check out the design docs there for reference. It uses the [Basil Material Theme](https://material.io/design/material-studies/basil.html#color) as a foundation for its color and typography.
+This is expands on the older [AdapterDelegateCards](https://github.com/vrickey123/AdapterDelegateCards) project which used RecyclerView Card Components to acheive the same goal: reuse three card layouts with many text styles to compose variants. 
 
-| [BasilCardTypes](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilCardTypes.kt)  | [BasilTextStyle](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilTextStyle.kt)  |
+Many of the **design engineering principles such as [separating layout and text style](https://github.com/vrickey123/AdapterDelegateCards#separating-layout-style-and-text-style)** sill apply, so check out AdapterDelegateCards docs for reference. 
+
+This app uses the [Basil Material Theme](https://material.io/design/material-studies/basil.html#color) as a foundation for its color and typography.
+
+| [BasilCardTypes](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilCardTypes.kt)  | [BasilTextStyles](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilTextStyle.kt)  |
 |---|---|
 | Material  | H5  |
 | Thumbnail  | H5_SERIF  |
@@ -18,8 +25,15 @@ This is expands on the older [AdapterDelegateCards](https://github.com/vrickey12
 |   | BODY1_SANS  |
 |   | OVERLINE  |
 
-```kotlin
-```
+### Examples
+#### Material Card x Overline Text x H5 Title Text x Body1 Text
+![Material Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/material-card-1.png)
+
+#### Thumbnail Card x Overline Text x H5 Serif Light Title Text x Body1Sans Text
+![Thumbnail Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/thumbnail-card-3.png)
+
+#### Visual Card x H6 Sans Bold Inverse Title Text
+![Visual Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/visual-card-2.png)
 
 ## [Card Model](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/Card.kt)
 The three Card layouts types - Material, Thumbnail, and Visual - are modeled by a data classes in sealed Card class.
@@ -281,8 +295,10 @@ This concept can easily be extended to drive styles from the sever by adding fie
         "fontFamily": "Merriweather",
         "fontWeight": 300,
         "fontStyle": "Normal",
+        "fontSize": 24,
+        "lineHeight": 26
       }
     },
 ```
 
-While very powful, the tradoff with this approach compared to the `enum BasilTextStyle` text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries. Instead all of the styles would be dynamically generated. This could have some consequences for your themes and make your app harder to maintain.
+The tradoff with this approach compared to the `enum BasilTextStyle` text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries. Instead all of the styles would be dynamically generated. This could have some consequences for your themes and make your app harder to maintain.
