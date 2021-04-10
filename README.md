@@ -21,7 +21,7 @@ This is expands on the older [AdapterDelegateCards](https://github.com/vrickey12
 ```kotlin
 ```
 
-## Card Model
+## [Card Model](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/Card.kt)
 The three Card layouts types - Material, Thumbnail, and Visual - are modeled by a data classes in sealed Card class.
 
 ```kotlin
@@ -52,7 +52,7 @@ sealed class Card(
 }
 ```
 
-### TextComponent
+### [TextComponent](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/TextComponent.kt)
 The TextComponent contains the text displayed to the user and the BasilTextStyle key discussed below.
 
 ```kotlin
