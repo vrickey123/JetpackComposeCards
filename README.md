@@ -62,6 +62,51 @@ data class TextComponent(
 )
 ```
 
+### Cards.json and PolymorphicJsonAdapterFactory
+The Material, Thumbnail, and Visual cards are represented in [JSON](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/assets/cards.json) below. They are parsed into their concrete types using Moshi's [PolymorphicJsonAdapterFactory](https://github.com/vrickey123/JetpackComposeCards/blob/51c918d2c4bcf6d91fedc7c255664dbce4a9afe4/app/src/main/java/com/vrickey123/jetpackcomposecards/data/Serialization.kt#L53-L57).
+```json
+  {
+    "id": 1,
+    "type": "material",
+    "title": {
+      "text": "Lorem ipsum",
+      "textStyleKey": "h5"
+    },
+    "body": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "textStyleKey": "body1"
+    },
+    "overline": {
+      "text": "Birds of Paradise",
+      "textStyleKey": "overline"
+    }
+  },
+  {
+    "id": 2,
+    "type": "visual",
+    "title": {
+      "text": "Lorem ipsum",
+      "textStyleKey": "h6SansBoldInverse"
+    }
+  },
+  {
+    "id": 3,
+    "type": "thumbnail",
+    "title": {
+      "text": "Lorem ipsum",
+      "textStyleKey": "h5SerifLight"
+    },
+    "body": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "textStyleKey": "body1Sans"
+    },
+    "overline": {
+      "text": "Friends",
+      "textStyleKey": "overline"
+    }
+  },
+```
+
 ## Jetpack Compose Card UI
 ### [Material Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/ui/cards/MaterialCard.kt)
 ```kotlin
