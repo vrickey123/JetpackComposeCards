@@ -223,6 +223,7 @@ fun VisualCard(
 ## Jetpack Compose Text Style
 ### [BasilTypography](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/ui/theme/typography/Type.kt) Extends MaterialTypography
 To add new text styles and extend from ones that already exist in the Compose UI Material library, `BasilType` wraps Material `Typography`.
+
 ```kotlin
 @Immutable
 data class BasilType(
@@ -247,21 +248,22 @@ data class BasilType(
 
 ### [TextStyle Extension Function](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/extensions/TextStyleExtensions.kt) Maps BasilTextStyle
 A `TextStyle#build` extension function maps the `BasilTextStyle` to a static Compose `TextStyle` resource. This is how a `TextComponent#textStyleKey` drives a style.
+
 ```kotlin
 fun TextStyle.Companion.build(
     textStyleKey: BasilTextStyle
 ): TextStyle {
     return when (textStyleKey) {
-        BasilTextStyle.H5 -> return BasilTypography.materialTypography.h5
-        BasilTextStyle.H5_SERIF -> return BasilTypography.h5Serif
-        BasilTextStyle.H5_SERIF_LIGHT -> return BasilTypography.h5SerifLight
-        BasilTextStyle.H5_SERIF_ITALIC -> return BasilTypography.h5SerifItalic
-        BasilTextStyle.H5_SANS_BOLD -> return BasilTypography.h6SansBold
-        BasilTextStyle.H6_SANS_BOLD_INVERSE -> return BasilTypography.h6SansBoldInverse
-        BasilTextStyle.BODY1 -> return BasilTypography.materialTypography.body1
+        BasilTextStyle.H5 -> BasilTypography.materialTypography.h5
+        BasilTextStyle.H5_SERIF -> BasilTypography.h5Serif
+        BasilTextStyle.H5_SERIF_LIGHT -> BasilTypography.h5SerifLight
+        BasilTextStyle.H5_SERIF_ITALIC -> BasilTypography.h5SerifItalic
+        BasilTextStyle.H5_SANS_BOLD -> BasilTypography.h6SansBold
+        BasilTextStyle.H6_SANS_BOLD_INVERSE -> BasilTypography.h6SansBoldInverse
+        BasilTextStyle.BODY1 -> BasilTypography.materialTypography.body1
         BasilTextStyle.BODY1_SERIF -> BasilTypography.body1Serif
         BasilTextStyle.BODY1_SANS -> BasilTypography.body1Sans
-        BasilTextStyle.OVERLINE -> BasilTypography.materialTypography.overline
+        BasilTextStyle.OVERLINE -> Typography.overline
     }
 }
 ```
