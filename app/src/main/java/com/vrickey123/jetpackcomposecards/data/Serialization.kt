@@ -1,7 +1,12 @@
 package com.vrickey123.jetpackcomposecards.data
 
+import android.content.Context
+import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 import com.squareup.moshi.adapters.PolymorphicJsonAdapterFactory
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.vrickey123.jetpackcomposecards.AssetUtil
 import com.vrickey123.jetpackcomposecards.data.model.BasilCardTypes
 import com.vrickey123.jetpackcomposecards.data.model.BasilTextStyle
 import com.vrickey123.jetpackcomposecards.data.model.Card
@@ -35,6 +40,13 @@ object Serialization {
 
     val moshi = buildMoshi()
 
+    fun getCardsFromAsset(context: Context, filename: String): List<Card> {
+        val listType = Types.newParameterizedType(List::class.java, Card::class.java)
+        val adapter: JsonAdapter<List<Card>> = moshi.adapter(listType)
+        val jsonString = AssetUtil.getJsonFromAsset(context, filename)
+        return adapter.fromJson(jsonString)!!
+    }
+
     internal fun buildMoshi(): Moshi {
         return Moshi.Builder()
             .add(
@@ -44,6 +56,7 @@ object Serialization {
                     .withSubtype(Card.Visual::class.java, BasilCardTypes.visual.name)
                     .withDefaultValue(defaultCard)
             )
+            .add(KotlinJsonAdapterFactory()) // Order matters! Place Kotlin adapter last.
             .build()
     }
 }

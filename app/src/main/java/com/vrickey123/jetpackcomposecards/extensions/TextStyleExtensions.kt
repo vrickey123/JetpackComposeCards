@@ -17,5 +17,6 @@ fun TextStyle.Companion.build(
         BasilTextStyle.BODY1 -> return BasilTypography.materialTypography.body1
         BasilTextStyle.BODY1_SERIF -> BasilTypography.body1Serif
         BasilTextStyle.BODY1_SANS -> BasilTypography.body1Sans
+        BasilTextStyle.OVERLINE -> BasilTypography.materialTypography.overline
     }
 }

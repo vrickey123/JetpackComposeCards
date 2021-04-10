@@ -73,6 +73,7 @@
   },
   {
     "id": 6,
+    "type": "material",
     "title": {
       "text": "Lorem ipsum",
       "textStyleKey": "h5SerifLight"
@@ -168,6 +169,7 @@
   },
   {
     "id": 6,
+    "type": "thumbnail",
     "title": {
       "text": "Lorem ipsum",
       "textStyleKey": "h5SansBold"
