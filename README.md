@@ -18,8 +18,12 @@ This is expands on the older [AdapterDelegateCards](https://github.com/vrickey12
 |   | BODY1_SANS  |
 |   | OVERLINE  |
 
-```kotlin
-```
+### Examples
+![Material Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/material-card-1.png)
+
+![Thumbnail Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/thumbnail-card-3.png)
+
+![Visual Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/visual-card-2.png)
 
 ## [Card Model](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/Card.kt)
 The three Card layouts types - Material, Thumbnail, and Visual - are modeled by a data classes in sealed Card class.
