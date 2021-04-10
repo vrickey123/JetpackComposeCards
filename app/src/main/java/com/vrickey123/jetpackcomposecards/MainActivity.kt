@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                         topBar = {
                             val title = stringResource(id = R.string.app_name)
                             TopAppBar(
-                                title = { Text(text = title) }
+                                title = { Text(text = title, color = BasilYellow) },
                             )
                         }) {
                         Content(cards = cards)
