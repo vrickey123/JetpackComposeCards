@@ -271,4 +271,18 @@ fun TextStyle.Companion.build(
 ## Client-side vs Server-side styles
 This concept can easily be extended to drive styles from the sever by adding fields that could be used to build a Compose TextStyle on the fly. For example:
 
-While very powful, the tradoff with this approach compared to the enum BasilTextStyle text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries.
+```json
+ {
+    "id": 1,
+    "type": "material",
+    "title": {
+      "text": "Lorem ipsum",
+      "textStyle": {
+        "fontFamily": "Merriweather",
+        "fontWeight": 300,
+        "fontStyle": "Normal",
+      }
+    },
+```
+
+While very powful, the tradoff with this approach compared to the `enum BasilTextStyle` text style key used by this sample app is that you would be unable to use any of the static Compose UI Material Theme or Compose Typography features from the Compose libraries. Instead all of the styles would be dynamically generated. This could have some consequences for your themes and make your app harder to maintain.
