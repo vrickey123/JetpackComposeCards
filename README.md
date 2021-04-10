@@ -3,7 +3,9 @@
 This is a proof of concept for a Jetpack Compose card system with JSON-driven card layouts and text styles.
 
 ## Card and Text Style Variants
-This is expands on the older [AdapterDelegateCards](https://github.com/vrickey123/AdapterDelegateCards) project which used RecyclerView Card Components to acheive the same goals. Many of the Design principles such as separating layout and text style sill apply, so check out the design docs there for reference. It uses the [Basil Material Theme](https://material.io/design/material-studies/basil.html#color) as a foundation for its color and typography.
+This is expands on the older [AdapterDelegateCards](https://github.com/vrickey123/AdapterDelegateCards) project which used RecyclerView Card Components to acheive the same goal: reuse three card layouts with many text styles to compose variants. 
+
+Many of the Design principles such as separating layout and text style sill apply, so check out AdapterDelegateCards design docs for reference. It uses the [Basil Material Theme](https://material.io/design/material-studies/basil.html#color) as a foundation for its color and typography.
 
 | [BasilCardTypes](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilCardTypes.kt)  | [BasilTextStyle](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilTextStyle.kt)  |
 |---|---|
@@ -19,10 +21,13 @@ This is expands on the older [AdapterDelegateCards](https://github.com/vrickey12
 |   | OVERLINE  |
 
 ### Examples
+#### Material x Overline x H5 Title x Body1
 ![Material Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/material-card-1.png)
 
+#### Thumbnail x Overline x H5 Serif Light Title x Body1Sans
 ![Thumbnail Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/thumbnail-card-3.png)
 
+#### Visual x H6 Sans Bold Inverse Title
 ![Visual Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/docs/visual-card-2.png)
 
 ## [Card Model](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/Card.kt)
