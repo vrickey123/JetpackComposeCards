@@ -108,6 +108,8 @@ The Material, Thumbnail, and Visual cards are represented in [JSON](https://gith
 ```
 
 ## Jetpack Compose Card UI
+The Composable functions for each of the `Card` types takes `TextComponent`'s as their parameters which set the user-facing text and text style in the implementation. 
+
 ### [Material Card](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/ui/cards/MaterialCard.kt)
 ```kotlin
 @Composable
