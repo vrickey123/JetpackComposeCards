@@ -11,13 +11,18 @@ import com.vrickey123.jetpackcomposecards.ui.theme.typography.font.Merriweather
 import com.vrickey123.jetpackcomposecards.ui.theme.typography.font.QuattroCentoSans
 
 // Set of Material typography styles to start with
-private val Typography = Typography(
+val Typography = Typography(
     defaultFontFamily = Merriweather,
     body1 = TextStyle(
+        fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
+        letterSpacing = 0.5.sp,
         color = BasilGreenDark
     ),
     overline = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 10.sp,
+        letterSpacing = 1.5.sp,
         color = BasilGreenDark
     )
 )
