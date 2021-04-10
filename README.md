@@ -295,6 +295,8 @@ This concept can easily be extended to drive styles from the sever by adding fie
         "fontFamily": "Merriweather",
         "fontWeight": 300,
         "fontStyle": "Normal",
+        "fontSize": 24,
+        "lineHeight": 26
       }
     },
 ```
