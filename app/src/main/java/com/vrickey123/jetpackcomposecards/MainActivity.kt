@@ -18,6 +18,7 @@ import com.vrickey123.jetpackcomposecards.ui.cards.MaterialCard
 import com.vrickey123.jetpackcomposecards.ui.cards.ThumbnailCard
 import com.vrickey123.jetpackcomposecards.ui.cards.VisualCard
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTheme
+import com.vrickey123.jetpackcomposecards.ui.theme.BasilYellow
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,11 +33,13 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     // A Scaffold is used to set Material Layouts like the TopAppBar and Drawer
-                    Scaffold(topBar = {
-                        TopAppBar {
-                            title = stringResource(id = R.string.app_name)
-                        }
-                    }) {
+                    Scaffold(
+                        topBar = {
+                            val title = stringResource(id = R.string.app_name)
+                            TopAppBar(
+                                title = { Text(text = title) }
+                            )
+                        }) {
                         Content(cards = cards)
                     }
                 }
@@ -53,9 +56,7 @@ class MainActivity : ComponentActivity() {
  *
  * */
 @Composable
-fun Content(
-    cards: List<Card>
-) {
+fun Content(cards: List<Card>) {
     Column(
         modifier = Modifier.padding(
             horizontal = 16.dp,
