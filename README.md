@@ -9,7 +9,7 @@ Many of the **design engineering principles such as [separating layout and text 
 
 This app uses the [Basil Material Theme](https://material.io/design/material-studies/basil.html#color) as a foundation for its color and typography.
 
-| [BasilCardTypes](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilCardTypes.kt)  | [BasilTextStyle](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilTextStyle.kt)  |
+| [BasilCardTypes](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilCardTypes.kt)  | [BasilTextStyles](https://github.com/vrickey123/JetpackComposeCards/blob/develop/app/src/main/java/com/vrickey123/jetpackcomposecards/data/model/BasilTextStyle.kt)  |
 |---|---|
 | Material  | H5  |
 | Thumbnail  | H5_SERIF  |
