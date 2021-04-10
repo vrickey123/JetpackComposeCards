@@ -3,6 +3,7 @@ package com.vrickey123.jetpackcomposecards.extensions
 import androidx.compose.ui.text.TextStyle
 import com.vrickey123.jetpackcomposecards.data.model.BasilTextStyle
 import com.vrickey123.jetpackcomposecards.ui.theme.BasilTypography
+import com.vrickey123.jetpackcomposecards.ui.theme.Typography
 
 fun TextStyle.Companion.build(
     textStyleKey: BasilTextStyle
@@ -15,8 +16,8 @@ fun TextStyle.Companion.build(
         BasilTextStyle.H5_SANS_BOLD -> return BasilTypography.h6SansBold
         BasilTextStyle.H6_SANS_BOLD_INVERSE -> return BasilTypography.h6SansBoldInverse
         BasilTextStyle.BODY1 -> return BasilTypography.materialTypography.body1
-        BasilTextStyle.BODY1_SERIF -> BasilTypography.body1Serif
-        BasilTextStyle.BODY1_SANS -> BasilTypography.body1Sans
-        BasilTextStyle.OVERLINE -> BasilTypography.materialTypography.overline
+        BasilTextStyle.BODY1_SERIF -> return BasilTypography.body1Serif
+        BasilTextStyle.BODY1_SANS -> return BasilTypography.body1Sans
+        BasilTextStyle.OVERLINE -> return Typography.overline
     }
 }
