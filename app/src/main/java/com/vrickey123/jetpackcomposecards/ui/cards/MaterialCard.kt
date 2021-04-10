@@ -1,15 +1,14 @@
 package com.vrickey123.jetpackcomposecards.ui.cards
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusModifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
@@ -27,22 +26,27 @@ fun MaterialCard(
     body: TextComponent
 ) {
     Card(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            Modifier.padding(
-                horizontal = MaterialInnerHorizontalPadding,
-                vertical = MaterialInnerVerticalPadding
-            )
-        ) {
+        Column {
             // 3/2 aspect ratio
             Image(
                 modifier = Modifier
                     .aspectRatio(1.5F),
                 painter = painterResource(id = R.drawable.bird_of_paradise),
                 contentDescription = "Bird of paradise stretching wings on a tree branch",
+                contentScale = ContentScale.FillBounds
             )
-            Text(text = overline.text, style = TextStyle.build(overline.textStyleKey))
-            Text(text = title.text, style = TextStyle.build(title.textStyleKey))
-            Text(text = body.text, style = TextStyle.build(body.textStyleKey))
+            // An inner column is needed to set the padding for the text content
+            // so that the image is full-bleed
+            Column(
+                modifier = Modifier.padding(
+                    horizontal = MaterialInnerHorizontalPadding,
+                    vertical = MaterialInnerVerticalPadding
+                )
+            ) {
+                Text(text = overline.text, style = TextStyle.build(overline.textStyleKey))
+                Text(text = title.text, style = TextStyle.build(title.textStyleKey))
+                Text(text = body.text, style = TextStyle.build(body.textStyleKey))
+            }
         }
     }
 }

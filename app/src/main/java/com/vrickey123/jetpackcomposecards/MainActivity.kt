@@ -33,7 +33,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Column {
+                    Column(
+                        modifier = Modifier.padding(
+                            horizontal = 16.dp,
+                            vertical = 16.dp
+                        )
+                    ) {
                         LazyColumn() {
                             items(cards) { card ->
                                 when (card) {
